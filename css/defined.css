@@ -1,0 +1,125 @@
+/*body{
+		background: #ec008c;  
+background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
+background: linear-gradient(to right, #fc6767, #ec008c);
+	}*/
+
+
+body
+{
+	background-image: url("../image/DIMIGO.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+th{
+	background-color: rgba(136,14,79, 0.1);
+}
+.reg{
+	background-color: rgba(255, 255, 255, 0.7);
+	padding-bottom: 20px!important;
+}
+
+input[type='text']{
+	border-bottom: 2px solid black !important;
+	font-weight: bold !important;
+	text-align: center;
+	color: black;
+}
+
+[type="radio"]:checked + label::after, [type="radio"].with-gap:checked + label::after {
+    background-color: #880e4f !important;
+}
+
+input::placeholder{
+	color: black;
+}
+
+.text{
+	font-weight: bold !important;
+
+}
+
+table{
+	border: 4px solid black;
+	table-layout:fixed;
+}
+.trhead{
+	border-top: 2px solid black;
+}
+
+.cell2{
+	border-right: 4px solid black;
+}
+.lunchcell{
+	border-left: 4px solid black;
+	border-right: 4px solid black;
+}
+.lhead{
+	border: 0px;
+}
+
+td,th{
+	/*border: 1px solid #D1D1D1;*/
+	text-align: center;
+	border-radius: 0px;
+}
+
+
+
+
+
+
+
+
+
+/*.sld{
+	opacity: 1.5;
+	color: red;
+}*/
+
+.timings{
+	display:table-cell;
+}
+
+.lunchcell{
+	display:table-cell;
+}
+
+
+@media screen and (max-width:800px){
+.timings2{
+	display:none;
+	
+}
+.cellz{
+	display:none;
+	
+}
+.cell{
+	display:table-cell;
+	
+}
+.toggle{
+	display:block;
+}
+}
+@media screen and (min-width:800px){
+.timings2{
+	display:table-cell;
+	
+}
+.cellz{
+	display:table-cell;
+	
+}
+
+.cell{
+	display:table-cell;
+}
+
+.toggle{
+	display:none;
+}
+}

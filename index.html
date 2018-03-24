@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+       <!-- <link rel="stylesheet" type="text/css" href="css/defined.css"> -->
+      <link type="text/css" rel="stylesheet" href="css/defined.css"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- <style type="text/css">
+    	body
+			{background: #ec008c;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+    </style> -->
+    </head>
+
+    <body>
+
+    <nav>
+	    <div class="nav-wrapper pink lighten-1">
+	      <a href="#" class="brand-logo right">SlotBlot</a>
+	      <ul id="nav-mobile" class="left">
+	        <li class="active"><a href="index.html" >Post TimeTable</a></li>
+	        <li><a href="get.htm">Get Members</a></li>
+	      </ul>
+	    </div>
+    </nav>
+<!-- #################### -->
+
+
+
+	<div class="row" id="register">
+  	<div class="col l4 m3"></div>
+  	<div class="card col l4 m6 reg" >
+  		<div class="card-content" >
+  			<h3><b><center>Enter Details</center></b></h3>
+  			<div class="input-field col s12">
+  				<i class="material-icons prefix">account_circle</i>
+          		<input id="name" type="text" placeholder="Name">
+        	</div>
+        	<div class="input-field col s12">
+  				<i class="material-icons prefix">confirmation_number</i>
+          		<input id="reg" type="text" placeholder="Registration Number">
+        	</div>
+        	<div class="input-field col s12">
+  				<i class="material-icons prefix">email</i>
+          		<input id="email" type="text" placeholder="Email">
+        	</div>
+        	<div class="input-field col s12">
+  				<i class="material-icons prefix">phone</i>
+          		<input id="phno" type="text" placeholder="Phone Number">
+        	</div>
+        	<center><a class="btn waves-effect waves-light black" onclick="pst()">Submit</a></center>
+  		</div>
+  	</div>
+  	
+  </div>
+
+
+
+
+  <div class="row" id="tablecontent" style="display: none">
+  	<div class="col l1 hide-on-med-and-down"></div>
+  	<div class="card col l10 s12 m12 reg" >
+  		<div class="card-content" >
+  			<h3 style="margin: 0px"><b><center>Choose Slots</center></b></h3>
+  			
+
+
+
+
+<!--TIME TABLE-->
+	<table >
+	<thead>
+	<tr class="trhead">
+	<th rowspan="2" class="daycell">Theory</th><th class="cell2">Start</th><th class="timings">08:00</th><th class="timings">09:00</th><th class="timings">10:00</th><th class="timings">11:00</th><th class="timings">12:00</th><th class="timings">-</th><th class="lunchcell lhead">-</th><th class="timings2">14:00</th><th class="timings2">15:00</th><th class="timings2">16:00</th><th class="timings2">17:00</th><th class="timings2">18:00</th><th class="timings2">-</th><th class="timings2">19:00</th>
+	</tr >
+	<tr >
+	<th class="cell2">End</th><th class="timings">08:50</th><th class="timings">09:50</th><th class="timings">10:50</th><th class="timings">11:50</th><th class="timings">12:50</th><th class="timings">-</th><th class="lunchcell lhead">-</th><th class="timings2">14:50</th><th class="timings2">15:50</th><th class="timings2">16:50</th><th class="timings2">17:50</th><th class="timings2">18:50</th><th class="timings2">-</th><th class="timings2">19:50</th>
+	</tr>
+	<tr class="trhead">
+	<th rowspan="2" class="daycell" >Lab</th><th class="cell2">Start</th><th class="timings">08:01</th><th class="timings">08:46</th><th class="timings">10:01</th><th class="timings">10:46</th><th class="timings">11:30</th><th class="timings">12:16</th><th class="lunchcell lhead">-</th><th class="timings2">14:01</th><th class="timings2">14:46</th><th class="timings2">16:01</th><th class="timings2">16:46</th><th class="timings2">18:01</th><th class="timings2">18:46</th><th class="timings2">19:31</th>
+	</tr>
+	<tr>
+	<th class="cell2">End</th><th class="timings">08:45</th><th class="timings">09:30</th><th class="timings">10:45</th><th class="timings">11:30</th><th class="timings">12:15</th><th class="timings">13:00</th><th class="lunchcell lhead">-</th><th class="timings2">14:45</th><th class="timings2">15:30</th><th class="timings2">16:45</th><th class="timings2">17:30</th><th class="timings2">18:45</th><th class="timings2">19:30</th><th class="timings2">20:15</th>
+	</tr>
+	</thead>
+	
+	<tr class="trhead" style="border-top: 4px solid black">
+	<th class="daycell" rowspan="2">MON</th><th class="cell2">Theory</th>
+	<td id="a1" class="cell waves-effect darken-4" onclick="editable(1)">A1</td>
+	<td id="a2" class="cell waves-effect darken-4" onclick="editable(2)">F1</td>
+	<td id="a3" class="cell waves-effect darken-4"  onclick="editable(3)">D1</td>
+	<td id="a4" class="cell waves-effect darken-4" onclick="editable(4)">TB1</td>
+	<td id="a5" class="cell waves-effect darken-4"  onclick="editable(5)">TG1</td>
+	<td id="a6" class="cell" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td id="a7" class="cellz waves-effect darken-4" onclick="editable(7)">A2</td>
+	<td id="a8" class="cellz waves-effect darken-4" onclick="editable(8)">F2</td>
+	<td id="a9" class="cellz waves-effect darken-4"  onclick="editable(9)">D2</td>
+	<td id="a10" class="cellz waves-effect darken-4" onclick="editable(10)">TB2</td>
+	<td id="a11" class="cellz waves-effect darken-4" onclick="editable(11)">TG2</td>
+	<td id="a12" class="cellz" onclick="">-</td>
+	<td id="a13" class="cellz waves-effect darken-4" onclick="editable(13)">V3</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td class="cell waves-effect darken-4" id="a101" onclick="editable(101)">L1</td>
+	<td class="cell waves-effect darken-4" id="a102" onclick="editable(102)">L2</td>
+	<td class="cell waves-effect darken-4" id="a103" onclick="editable(103)">L3</td>
+	<td class="cell waves-effect darken-4" id="a104" onclick="editable(104)">L4</td>
+	<td class="cell waves-effect darken-4" id="a105" onclick="editable(105)">L5</td>
+	<td class="cell waves-effect darken-4" id="a106" onclick="editable(106)">L6</td>
+	<th class="lunchcell">Lunch</th>
+	<td class="cellz waves-effect darken-4" id="a107" onclick="editable(107)">L31</td>
+	<td class="cellz waves-effect darken-4" id="a108" onclick="editable(108)">L32</td>
+	<td class="cellz waves-effect darken-4" id="a109" onclick="editable(109)">L33</td>
+	<td class="cellz waves-effect darken-4" id="a110" onclick="editable(110)">L34</td>
+	<td class="cellz waves-effect darken-4" id="a111" onclick="editable(111)">L35</td>
+	<td class="cellz waves-effect darken-4" id="a112" onclick="editable(112)">L36</td>
+	<td class="cellz" id="" onclick="">-</td>
+	</tr>
+	
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">TUE</th><th class="cell2">Theory</th>
+	<td id="a15" class="cell waves-effect darken-4" onclick="editable(15)">B1</td>
+	<td id="a16" class="cell waves-effect darken-4" onclick="editable(16)">G1</td>
+	<td id="a17" class="cell waves-effect darken-4" onclick="editable(17)">E1</td>
+	<td class="cell waves-effect darken-4" id="a18" onclick="editable(18)">TC1</td>
+	<td class="cell waves-effect darken-4" id="a19"  onclick="editable(19)">TAA1</td>
+	<td class="cell" id="a20"  onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a21" onclick="editable(21)">B2</td>
+	<td class="cellz waves-effect darken-4" id="a22"  onclick="editable(22)">G2</td>
+	<td  class="cellz waves-effect darken-4" id="a23" onclick="editable(23)">E2</td>
+	<td class="cellz waves-effect darken-4" id="a24"  onclick="editable(24)">TC2</td>
+	<td  class="cellz waves-effect darken-4" id="a25" onclick="editable(25)">TAA2</td>
+	<td  class="cellz" id="a26">-</td>
+	<td  class="cellz waves-effect darken-4" id="a27" onclick="editable(27)">V4</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a115" onclick="editable(115)">L7</td>
+	<td  class="cell waves-effect darken-4" id="a116" onclick="editable(116)">L8</td>
+	<td class="cell waves-effect darken-4" id="a117"  onclick="editable(117)">L9</td>
+	<td class="cell waves-effect darken-4" id="a118"  onclick="editable(118)">L10</td>
+	<td class="cell waves-effect darken-4" id="a119"  onclick="editable(119)">L11</td>
+	<td class="cell waves-effect darken-4" id="a120"  onclick="editable(120)">L12</td>
+	<th class="lunchcell">Lunch</th>
+	<td class="cellz waves-effect darken-4" id="a121"  onclick="editable(121)">L37</td>
+	<td  class="cellz waves-effect darken-4" id="a122" onclick="editable(122)">L38</td>
+	<td  class="cellz waves-effect darken-4" id="a123" onclick="editable(123)">L39</td>
+	<td  class="cellz waves-effect darken-4" id="a124" onclick="editable(124)">L40</td>
+	<td  class="cellz waves-effect darken-4" id="a125" onclick="editable(125)">L41</td>
+	<td class="cellz waves-effect darken-4" id="a126"  onclick="editable(126)">L42</td>
+	<td  class="cellz" id="a127" onclick="">-</td>
+	</tr>
+	
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">WED</th><th class="cell2">Theory</th>
+	<td class="cell waves-effect darken-4" id="a29"  onclick="editable(29)">D1</td>
+	<td class="cell waves-effect darken-4" id="a30"  onclick="editable(30)">B1</td>
+	<td class="cell waves-effect darken-4" id="a31"  onclick="editable(31)">G1</td>
+	<td class="cell waves-effect darken-4" id="a32"  onclick="editable(32)">TE1</td>
+	<td class="cell waves-effect darken-4" id="a33"  onclick="editable(33)">TCC1</td>
+	<td class="cell" id="a34"  onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td class="cellz waves-effect darken-4" id="a35"  onclick="editable(35)">C2</td>
+	<td class="cellz waves-effect darken-4" id="a36"  onclick="editable(36)">A2</td>
+	<td  class="cellz waves-effect darken-4" id="a37" onclick="editable(37)">F2</td>
+	<td  class="cellz waves-effect darken-4" id="a38" onclick="editable(38)">TD2</td>
+	<td  class="cellz waves-effect darken-4" id="a39" onclick="editable(39)">TB2</td>
+	<td  class="cellz" id="a40" onclick="">-</td>
+	<td  class="cellz waves-effect darken-4" id="a41" onclick="editable(41)">V5</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a129" onclick="editable(129)">L13</td>
+	<td  class="cell waves-effect darken-4" id="a130" onclick="editable(130)">L14</td>
+	<td  class="cell waves-effect darken-4" id="a131" onclick="editable(131)">L15</td>
+	<td  class="cell waves-effect darken-4" id="a132" onclick="editable(132)">L16</td>
+	<td  class="cell" id="a133" onclick="">-</td>
+	<td  class="cell" id="a134" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a135" onclick="editable(135)">L43</td>
+	<td  class="cellz waves-effect darken-4" id="a136" onclick="editable(136)">L44</td>
+	<td  class="cellz waves-effect darken-4" id="a137" onclick="editable(137)">L45</td>
+	<td  class="cellz waves-effect darken-4" id="a138" onclick="editable(138)">L46</td>
+	<td  class="cellz waves-effect darken-4" id="a139" onclick="editable(139)">L47</td>
+	<td  class="cellz waves-effect darken-4" id="a140" onclick="editable(140)">L48</td>
+	<td  class="cellz" id="a141" onclick="">-</td>
+	</tr>
+
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">THU</th>
+	<th class="cell2">Theory</th>
+	<td  class="cell waves-effect darken-4" id="a43" onclick="editable(43)">D1</td>
+	<td  class="cell waves-effect darken-4" id="a44" onclick="editable(44)">B1</td>
+	<td  class="cell waves-effect darken-4" id="a45" onclick="editable(45)">G1</td>
+	<td  class="cell waves-effect darken-4" id="a46" onclick="editable(46)">TE1</td>
+	<td  class="cell waves-effect darken-4" id="a47" onclick="editable(47)">TCC1</td>
+	<td  class="cell" id="a48" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a49" onclick="editable(49)">D2</td>
+	<td  class="cellz waves-effect darken-4" id="a50" onclick="editable(50)">B2</td>
+	<td  class="cellz waves-effect darken-4" id="a51" onclick="editable(51)">G2</td>
+	<td  class="cellz waves-effect darken-4" id="a52" onclick="editable(52)">TE2</td>
+	<td  class="cellz waves-effect darken-4" id="a53" onclick="editable(53)">TCC2</td>
+	<td  class="cellz" id="a54" onclick="">-</td>
+	<td  class="cellz waves-effect darken-4" id="a55" onclick="editable(55)">V6</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a143" onclick="editable(143)">L19</td>
+	<td  class="cell waves-effect darken-4" id="a144" onclick="editable(144)">L20</td>
+	<td  class="cell waves-effect darken-4" id="a145" onclick="editable(145)">L21</td>
+	<td  class="cell waves-effect darken-4" id="a146" onclick="editable(146)">L22</td>
+	<td  class="cell waves-effect darken-4" id="a147" onclick="editable(147)">L23</td>
+	<td  class="cell waves-effect darken-4" id="a148" onclick="editable(148)">L24</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a149" onclick="editable(149)">L49</td>
+	<td  class="cellz waves-effect darken-4" id="a150" onclick="editable(150)">L50</td>
+	<td  class="cellz waves-effect darken-4" id="a151" onclick="editable(151)">L51</td>
+	<td  class="cellz waves-effect darken-4" id="a152" onclick="editable(152)">L52</td>
+	<td  class="cellz waves-effect darken-4" id="a153" onclick="editable(153)">L53</td>
+	<td  class="cellz waves-effect darken-4" id="a154" onclick="editable(154)">L54</td>
+	<td  class="cellz" id="a155" onclick="">-</td>
+	</tr>
+	
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">FRI</th><th class="cell2">Theory</th>
+	<td  class="cell waves-effect darken-4" id="a57" onclick="editable(57)">E1</td>
+	<td  class="cell waves-effect darken-4" id="a58" onclick="editable(58)">C1</td >
+	<td  class="cell waves-effect darken-4" id="a59" onclick="editable(59)">TA1</td>
+	<td  class="cell waves-effect darken-4" id="a60" onclick="editable(60)">TF1</td>
+	<td  class="cell waves-effect darken-4" id="a61" onclick="editable(61)">TD1</td>
+	<td  class="cell" id="a62" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a63" onclick="editable(63)">E2</td>
+	<td  class="cellz waves-effect darken-4" id="a64" onclick="editable(64)">C2</td>
+	<td  class="cellz waves-effect darken-4" id="a65" onclick="editable(65)">TA2</td>
+	<td  class="cellz waves-effect darken-4" id="a66" onclick="editable(66)">TF2</td>
+	<td  class="cellz waves-effect darken-4" id="a67" onclick="editable(67)">TDD2</td>
+	<td  class="cellz" id="a68" onclick="">-</td>
+	<td  class="cellz waves-effect darken-4" id="a69" onclick="editable(69)">V7</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a157" onclick="editable(157)">L25</td>
+	<td  class="cell waves-effect darken-4" id="a158" onclick="editable(158)">L26</td>
+	<td  class="cell waves-effect darken-4" id="a159" onclick="editable(159)">L27</td>
+	<td  class="cell waves-effect darken-4" id="a160" onclick="editable(160)">L28</td>
+	<td  class="cell waves-effect darken-4" id="a161" onclick="editable(161)">L29</td>
+	<td  class="cell waves-effect darken-4" id="a162" onclick="editable(162)">L30</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a163" onclick="editable(163)">L55</td>
+	<td  class="cellz waves-effect darken-4" id="a164" onclick="editable(164)">L56</td>
+	<td  class="cellz waves-effect darken-4" id="a165" onclick="editable(165)">L57</td>
+	<td  class="cellz waves-effect darken-4" id="a166" onclick="editable(166)">L58</td>
+	<td  class="cellz waves-effect darken-4" id="a167" onclick="editable(167)">L59</td>
+	<td  class="cellz waves-effect darken-4" id="a168" onclick="editable(168)">L60</td>
+	<td  class="cellz" id="a169" onclick="">-</td>
+	</tr>
+	
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">SAT</th><th class="cell2">Theory</th>
+	<td  class="cell waves-effect darken-4" id="a71" onclick="editable(71)">v8</td>
+	<td  class="cell waves-effect darken-4" id="a72" onclick="editable(72)">X11</td>
+	<td  class="cell waves-effect darken-4" id="a73" onclick="editable(73)">X12</td>
+	<td  class="cell waves-effect darken-4" id="a74" onclick="editable(74)">Y11</td>
+	<td  class="cell waves-effect darken-4" id="a75" onclick="editable(75)">Y12</td>
+	<td  class="cell" id="a76" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a77" onclick="editable(77)">X21</td>
+	<td  class="cellz waves-effect darken-4" id="a78" onclick="editable(78)">Z21</td>
+	<td  class="cellz waves-effect darken-4" id="a79" onclick="editable(79)">Y21</td>
+	<td  class="cellz waves-effect darken-4" id="a80" onclick="editable(80)">W21</td>
+	<td  class="cellz waves-effect darken-4" id="a81" onclick="editable(81)">W22</td>
+	<td  class="cellz" id="a82" onclick="">-</td>
+	<td  class="cellz waves-effect darken-4" id="a83" onclick="editable(83)">V9</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a171" onclick="editable(171)">L71</td>
+	<td  class="cell waves-effect darken-4" id="a172" onclick="editable(172)">L72</td>
+	<td  class="cell waves-effect darken-4" id="a173" onclick="editable(173)">L73</td>
+	<td  class="cell waves-effect darken-4" id="a174" onclick="editable(174)">L74</td>
+	<td  class="cell waves-effect darken-4" id="a175" onclick="editable(175)">L75</td>
+	<td  class="cell waves-effect darken-4" id="a176" onclick="editable(176)">L76</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a177" onclick="editable(177)">L77</td>
+	<td  class="cellz waves-effect darken-4" id="a178" onclick="editable(178)">L78</td>
+	<td  class="cellz waves-effect darken-4" id="a179" onclick="editable(179)">L79</td>
+	<td  class="cellz waves-effect darken-4" id="a180" onclick="editable(180)">L80</td>
+	<td  class="cellz waves-effect darken-4" id="a181" onclick="editable(181)">L81</td>
+	<td  class="cellz waves-effect darken-4" id="a182" onclick="editable(182)">L82</td>
+	<td  class="cellz" id="a183" onclick="">-</td>
+	</tr>
+	
+	<tr class="trhead">
+	<th class="daycell" rowspan="2">SUN</th><th class="cell2">Theory</th>
+	<td  class="cell waves-effect darken-4" id="a85" onclick="editable(85)">V10</td>
+	<td  class="cell waves-effect darken-4" id="a86" onclick="editable(86)">Y11</td>
+	<td  class="cell waves-effect darken-4" id="a87" onclick="editable(87)">Y12</td>
+	<td  class="cell waves-effect darken-4" id="a88" onclick="editable(88)">X11</td>
+	<td  class="cell waves-effect darken-4" id="a89" onclick="editable(89)">X12</td>
+	<td  class="cell" id="a90" onclick="">-</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a91" onclick="editable(91)">Y21</td>
+	<td  class="cellz waves-effect darken-4" id="a92" onclick="editable(92)">Z21</td>
+	<td  class="cellz waves-effect darken-4" id="a93" onclick="editable(93)">X21</td>
+	<td  class="cellz waves-effect darken-4" id="a94" onclick="editable(94)">W21</td>
+	<td  class="cellz waves-effect darken-4" id="a95" onclick="editable(95)">W22</td>
+	<td  class="cellz" id="a96" onclick="">-</td>
+	<td  class="cellz waves-effect darken-4" id="a97" onclick="editable(97)">V11</td>
+	</tr>
+	<tr class='trend'>
+	<th class="cell2">Lab</th>
+	<td  class="cell waves-effect darken-4" id="a185" onclick="editable(185)">L83</td>
+	<td  class="cell waves-effect darken-4" id="a186" onclick="editable(186)">L84</td>
+	<td  class="cell waves-effect darken-4" id="a187" onclick="editable(187)">L85</td>
+	<td  class="cell waves-effect darken-4" id="a188" onclick="editable(188)">L86</td>
+	<td  class="cell waves-effect darken-4" id="a189" onclick="editable(189)">L87</td>
+	<td  class="cell waves-effect darken-4" id="a190" onclick="editable(190)">L88</td>
+	<th class="lunchcell">Lunch</th>
+	<td  class="cellz waves-effect darken-4" id="a191" onclick="editable(191)">L89</td>
+	<td  class="cellz waves-effect darken-4" id="a192" onclick="editable(192)">L90</td>
+	<td  class="cellz waves-effect darken-4" id="a193" onclick="editable(193)">L91</td>
+	<td  class="cellz waves-effect darken-4" id="a194" onclick="editable(194)">L92</td>
+	<td  class="cellz waves-effect darken-4" id="a195" onclick="editable(195)">L93</td>
+	<td  class="cellz waves-effect darken-4" id="a196" onclick="editable(196)">L94</td>
+	<td  class="cellz" id="a197" onclick="">-</td>
+	</tr>
+	</table>
+</div>
+<br><center>
+<a class="toggle waves-effect darken-4 pink white-text btn " id="toggle" onclick="changeview()">Show More</a>
+</center>
+<br><div id="but">
+<object align="left"><button class="waves-effect darken-4 pink white-text btn " id="rest" onclick="reset()">Reset</button></object>
+<object align="right"><button class="waves-effect darken-4 pink white-text btn " id="subt" onclick="submit2()">Submit</button></object></div>
+<div class="progress pink" id="prg" style="display: none;">
+      <div class="indeterminate"></div>
+  </div>
+
+
+
+  		</div>
+  	</div>
+  	
+
+  <div id="msg" style="display: none">
+	<div class="row" >
+  	<div class="col l3 m2"></div>
+  	<div class="card col l6 m8 reg" >
+  		<div class="card-content" >
+  			<h1>Sent!</h1>
+        	<center><input type="button" class="btn waves-effect waves-light black" value="Submit" onclick="bk2()"></center>
+  		</div>
+  	</div>
+  	
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #################### -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/defined.js"></script>
+    </body>
+  </html>

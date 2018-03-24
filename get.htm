@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+       <!-- <link rel="stylesheet" type="text/css" href="css/defined.css"> -->
+      <link type="text/css" rel="stylesheet" href="css/defined.css"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- <style type="text/css">
+    	body
+			{background: #ec008c;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+    </style> -->
+    </head>
+
+    <body>
+
+  <nav>
+	    <div class="nav-wrapper pink lighten-1">
+	      <a href="#" class="brand-logo right">SlotBlot</a>
+	      <ul id="nav-mobile" class="left">
+	        <li ><a href="index.html" >Post TimeTable</a></li>
+	        <li class="active"><a href="get.htm">Get Members</a></li>
+	      </ul>
+	    </div>
+    </nav>
+    
+<div class="row" id="pg1">
+  	<div class="col l3 m2 s1"></div>
+  	<div class="card col l6 m8 s10 reg" >
+  		<div class="card-content" >
+  			<div class="row">
+  			<h3><b><center>Choose Day And Time</center></b></h3>
+  			<div class="col l12" style="margin-left: -15px"><h5><b>Day:</b></h5></div>
+  			<div class="col l6">
+			    <p>
+			      <input name="day" type="radio" id="d1" class="radio" />
+			      <label for="d1" style="font-weight: bold; color: black">Monday</label>
+			    </p>
+			    <p>
+			      <input name="day" type="radio" id="d2" class="radio" />
+			      <label for="d2" style="font-weight: bold; color: black">Tuesday</label>
+			    </p>
+			    <p>
+			      <input name="day" type="radio" id="d3" class="radio" />
+			      <label for="d3" style="font-weight: bold; color: black">Wednesday</label>
+			    </p>
+			    <p>
+			      <input name="day" type="radio" id="d4" class="radio" />
+			      <label for="d4" style="font-weight: bold; color: black">Thursday</label>
+			    </p>
+			</div>
+			<div class="col l6">
+			    <p>
+			      <input name="day" type="radio" id="d5" class="radio" />
+			      <label for="d5" style="font-weight: bold; color: black">Friday</label>
+			    </p>
+			    <p>
+			      <input name="day" type="radio" id="d6" class="radio" />
+			      <label for="d6" style="font-weight: bold; color: black">Saturday</label>
+			    </p>
+			    <p>
+			      <input name="day" type="radio" id="d7" class="radio" />
+			      <label for="d7" style="font-weight: bold; color: black">Sunday</label>
+			    </p>
+
+			</div>
+		</div>
+
+
+		<div class="row">
+  			<div class="col l12 " style="margin-left: -15px"><h5><b>Time:</b></h5></div>
+  			<div class="col l6 valign-wrappe">
+			    <p>
+			      <input name="time" type="radio" id="t1" class="radio" />
+			      <label for="t1" style="font-weight: bold; color: black">08:00-8:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t2" class="radio" />
+			      <label for="t2" style="font-weight: bold; color: black">09:00-09:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t3" class="radio" />
+			      <label for="t3" style="font-weight: bold; color: black">10:00-10:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t4" class="radio" />
+			      <label for=t4 style="font-weight: bold; color: black">11:00-11:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t5" class="radio" />
+			      <label for="t5" style="font-weight: bold; color: black">12:00-12:50</label>
+			    </p>
+			</div>
+			<div class="col l6 valign-wrappe">
+				 <p>
+			      <input name="time" type="radio" id="t7" class="radio" />
+			      <label for="t7" style="font-weight: bold; color: black">14:00-14:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t8" class="radio" />
+			      <label for="t8" style="font-weight: bold; color: black">15:00-15:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t9" class="radio" />
+			      <label for="t9" style="font-weight: bold; color: black">16:00-16:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t10" class="radio" />
+			      <label for="t10" style="font-weight: bold; color: black">17:00-17:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t11" class="radio" />
+			      <label for="t11" style="font-weight: bold; color: black">18:00-18:50</label>
+			    </p>
+			    <p>
+			      <input name="time" type="radio" id="t13" class="radio" />
+			      <label for="t13" style="font-weight: bold; color: black">19:00-19:50</label>
+			    </p>
+
+			</div>
+		</div>
+
+  			
+  			
+        	<center><div id="sub"><a class="btn waves-effect waves-light black" onclick="get()" >Submit</a></div></center>
+        	<div class="progress pink" id="prg" style="display: none;">
+      <div class="indeterminate"></div>
+  </div>
+  		</div>
+  	</div>
+  	</div>
+  	
+  </div>
+
+
+
+
+
+
+<div class="row" id="pg2" style="display: none">
+  	<div class="col l3 m2 s1"></div>
+  	<div class="card col l6 m8 s10 reg" >
+  		<div class="card-content" >
+  			<h3><b><center>Members Available</center></b></h3>
+  			<div id="content">
+  			<!-- <b>Name:</b> Shubham Awasthi <br><b>RegNo:</b> 17bit0319<b><br> Email:</b> Shubham0522@gmail.com <b><br> PhoneNO:</b> 3435456<br><br><br> -->
+  		</div>
+        	<center><input type="button" class="btn waves-effect waves-light black" value="Back" onclick="bck()"></center>
+  		</div>
+  	</div>
+  	
+  </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/defined.js"></script>
+    </body>
+  </html>
