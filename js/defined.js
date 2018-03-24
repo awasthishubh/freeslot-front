@@ -121,6 +121,7 @@ function get(){
 				$('#prg').hide('slow');
 				return	;
               }
+              $("#content").html('');
               console.log("sentdffd");
               data.data.forEach(function(mem){
               	txt="<b>Name:</b> "+mem.name+"<br><b>RegNo:</b> "+mem.reg+"<br><b> Email:</b> "+mem.email+"<br><b> PhoneNo:</b> "+mem.phno+"<br><br>";
