@@ -1,17 +1,8 @@
-/*body{
+body{
 		background: #ec008c;  
 background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
 background: linear-gradient(to right, #fc6767, #ec008c);
-	}*/
-
-
-body
-{
-	background-image: url("../image/DIMIGO.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
+	}
 
 th{
 	background-color: rgba(136,14,79, 0.1);
