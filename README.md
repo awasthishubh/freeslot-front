@@ -2,11 +2,10 @@
 
 Application to get and manage free slots of Team members
 
-Frontend
-https://awasthishubh.github.io/freeslot-front/
+Frontend<br>
+https://awasthishubh.github.io/freeslot-front/<br>
 https://github.com/awasthishubh/freeslot-front/
 
-Backend
-
-https://slotfree.herokuapp.com/
+Backend<br>
+https://slotfree.herokuapp.com/<br>
 https://github.com/awasthishubh/freeslot-backend/
