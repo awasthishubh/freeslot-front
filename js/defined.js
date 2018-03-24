@@ -110,18 +110,19 @@ function get(){
           beforeSend: function() {
               
               console.log("begoresend");
-              prg
+              
                $('#sub').hide('slow');
 				$('#prg').show('slow');
           }
           }).done(function(data){
           	if(data.status==0){
-              	alert("No ones free");	
+              	alert("No ones free");
+              	$('#sub').show('slow');
+				$('#prg').hide('slow');
 				return	;
               }
               console.log("sentdffd");
               data.data.forEach(function(mem){
-              	console.log(mem);
               	txt="<b>Name:</b> "+mem.name+"<br><b>RegNo:</b> "+mem.reg+"<br><b> Email:</b> "+mem.email+"<br><b> PhoneNo:</b> "+mem.phno+"<br><br>";
               	$("#content").html($("#content").html()+txt);
               })
@@ -203,5 +204,5 @@ function bk2() {
 	$('#register').show('slow');
 	$('#msg').hide('slow');
 	reset();
-	console.log('bk');
+	console.log('bk');	
 }
